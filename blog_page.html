@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CKDT0T28ML"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CKDT0T28ML');
+  </script>
+  <title>My Portfolio</title>
+  <!--<link rel="stylesheet" type="text/css" href="styles.css">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Work+Sans:700,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Halant|Montserrat:700|Satisfy" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/email.png">
+  <link rel="icon" type="image/png" href="github-favicon.png">
+  <link rel="icon" type="image/png" href="linkedin-favicon.png">
+
+  <style>
+    /* Custom CSS for padding the nav-items on the right side */
+    body {
+      padding-top: 50px; /* Adjust the value as needed based on your navbar height */
+      background:  #F8CBA6;
+    }
+    /*.about-content {*/
+    /*    !* Custom CSS for moving the content closer to the image *!*/
+    /*    !*padding-top: 30px; !* Adjust the value as needed *!*!*/
+    /*    margin-right: 70px; !* Adjust the value as needed *!*/
+    /*}*/
+    .no-border-card {
+      border: none;
+      background: #FFE7CC;
+      /*background: white;*/
+    }
+    .timeline {
+      border-left: 3px solid #884A39;;
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 4px;
+      /*background: rgba(114, 124, 245, 0.09);*/
+      background: #ECF9FF;
+      margin: 0 auto;
+      letter-spacing: 0.2px;
+      position: relative;
+      line-height: 1.4em;
+      font-size: 1.03em;
+      padding: 50px;
+      list-style: none;
+      text-align: left;
+      max-width: 60%;
+    }
+
+    @media (max-width: 767px) {
+      .timeline {
+        max-width: 98%;
+        padding: 25px;
+      }
+    }
+
+    .timeline h1 {
+      font-weight: 300;
+      font-size: 1.4em;
+    }
+
+    .timeline h2,
+    .timeline h3 {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .timeline .event {
+      border-bottom: 1px dashed #e8ebf1;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    @media (max-width: 767px) {
+      .timeline .event {
+        padding-top: 30px;
+      }
+    }
+
+    .timeline .event:last-of-type {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: none;
+    }
+
+    .timeline .event:before,
+    .timeline .event:after {
+      position: absolute;
+      display: block;
+      top: 0;
+    }
+
+    .timeline .event:before {
+      left: -210px;
+      content: attr(data-date);
+      text-align: right;
+      font-weight: 100;
+      /*font-size: 0.9em;*/
+      font-family: 'Merriweather', serif;
+      font-size:15px;
+      min-width: 120px;
+    }
+
+    @media (max-width: 767px) {
+      .timeline .event:before {
+        left: 0px;
+        text-align: left;
+      }
+    }
+
+    .timeline .event:after {
+      -webkit-box-shadow: 0 0 0 3px #C38154;
+      box-shadow: 0 0 0 3px #C38154;
+      left: -55.8px;
+      background: #FFE7CC;
+      /*background: white;*/
+      border-radius: 50%;
+      height: 9px;
+      width: 9px;
+      content: "";
+      top: 5px;
+    }
+
+    @media (max-width: 767px) {
+      .timeline .event:after {
+        left: -31.8px;
+      }
+    }
+
+    .rtl .timeline {
+      border-left: 0;
+      text-align: right;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 4px;
+      border-top-left-radius: 4px;
+      border-right: 3px solid #727cf5;
+    }
+
+    .rtl .timeline .event::before {
+      left: 0;
+      right: -170px;
+    }
+
+    .rtl .timeline .event::after {
+      left: 0;
+      right: -55.8px;
+    }
+    .work-experience{
+      padding: 15px 0;
+      /*margin-right: 150px;*/
+      /*background-color: #FFFBEB;*/
+      background-color: #FFE7CC;
+      /*background: white;*/
+    }
+
+    .about-heading {
+      /* Custom CSS for moving the heading a little more down */
+      margin-top: 20px; /* Adjust the value as needed */
+      font-family: 'Satisfy', cursive;
+      /*font-family: 'Merriweather', serif;*/
+      font-weight: 800;
+      /*font-size: 25px;*/
+      color: #884A39;
+    }
+    .about-section {
+      padding: 50px 0;
+      /*margin-right: 150px;*/
+      /*background-color: #FFFBEB;*/
+      background-color: #FFFBEB;
+    }
+    .about-section .container {
+      /*padding: 50px 0;*/
+      margin-right: 150px;
+
+    }
+    .about-image {
+      max-width: 300px;
+      /* Custom CSS for circular outline */
+      border: 5px solid #0E2954; /* You can change the border color */
+      border-radius: 50%;
+      margin-left: 250px;
+    }
+    @media (max-width: 767px){
+      .about-section .row {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /*.col-md-6 {*/
+      /*    width: 100%; !* Make the columns take up the full width on smaller screens *!*/
+      /*}*/
+
+      .about-section .about-image {
+        /*max-width: 150px; !* Adjust the max-width as per your preference *!*/
+        /*text-align: center;*/
+        margin-left: 50px;
+      }
+    }
+    .justified-text {
+      text-align: justify;
+    }
+    .navbar-nav-right {
+      padding-right: 100px; /* Adjust the value as needed */
+    }
+    .navbar-brand-left {
+      /*font-family: 'Work Sans', sans-serif;*/
+      font-family: 'Satisfy', cursive;
+      color: #0E2954;
+      font-size: 26px;
+      font-weight: 800;
+      padding-left: 100px; /* Adjust the value as needed */
+    }
+    .navbar-custom {
+      background-color: #ECF9FF; /* Replace with your desired color */
+    }
+
+
+    .navbar-custom .navbar-nav .nav-link.active{
+      /*color: #884A39; !* Replace with your desired font color *!*/
+      color: #0E2954
+    }
+    /* Change font color of navbar links */
+    .navbar-custom .navbar-nav .nav-link {
+      font-family: 'Merriweather', serif;
+      font-weight: 800;
+      color: #C38154; /* Replace with your desired font color */
+      /*color: #884A39; !* Replace with your desired font color *!*/
+    }
+
+    .work-ex{
+      font-family: 'Merriweather', serif;
+      font-weight: 800;
+      color: #0E2954;
+      font-size: 30px;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    /*{*/
+    /*    font-size:3px;*/
+    /*}*/
+
+    .contact-area {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background: #F8CBA6;
+    }
+
+    @media only screen and (max-width:768px) {
+      .contact {
+        margin-bottom: 60px;
+      }
+    }
+
+    .contact input {
+      background: #ECF9FF;
+      /*border: 1px solid #0E2954;*/
+      border-radius: 30px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #232434;
+      font-size: 16px;
+      height: 50px;
+      padding: 10px;
+      width: 100%;
+      font-family: 'poppins', sans-serif;
+      padding-left: 30px;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+    }
+
+    .contact textarea {
+      background: #ECF9FF;
+      border-radius: 30px; /* Set the desired border-radius for rounded corners */
+      /*border: 1px solid #0E2954;*/
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: #232434;
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 0px;
+      width: 100%;
+      font-family: 'poppins', sans-serif;
+      padding-left: 30px;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+    }
+
+    .contact input:focus {
+      /*background:blue;*/
+      border: 1px solid #884A39;
+      color: #232434;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      outline: 0 none;
+    }
+
+    .contact textarea:focus {
+      /*background: green;*/
+      border: 1px solid #884A39;
+      color: #232434;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      outline: 0 none;
+    }
+
+    .form-control::placeholder {
+      color: #232434;
+      opacity: 1;
+    }
+
+    .btn-contact-bg {
+      border-radius: 30px;
+      color: #fff;
+      outline: medium none !important;
+      padding: 15px 27px;
+      text-transform: capitalize;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      /*background: #0E2954;*/
+      background: #884A39;
+      font-family: 'poppins', sans-serif;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
+    .btn-contact-bg:hover,
+    .btn-contact-bg:focus {
+      background: #232434;
+      color: #fff;
+    }
+
+    /*START ADDRESS*/
+
+    .single_address {
+      overflow: hidden;
+      margin-bottom: 10px;
+      padding-left: 40px;
+    }
+
+    @media only screen and (max-width:768px) {
+      .single_address {
+        padding-left: 0px;
+      }
+    }
+    .contact .col-md-12
+    {
+      margin-top: 7px;
+    }
+
+    .single_address i {
+      background: #f6f6f6;
+      color: #7564e5;
+      border-radius: 30px;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      float: left;
+      margin-right: 14px;
+      font-size: 22px;
+      -webkit-box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+    }
+
+    .single_address:hover i {
+      background: #7564e5;
+      color: #fff;
+    }
+
+    .single_address h4 {
+      font-size: 18px;
+      margin-bottom: 0px;
+      overflow: hidden;
+      font-weight: 600;
+    }
+
+    .single_address p {
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    .section-title h1 {
+      font-family: 'Satisfy', cursive;
+      color: #0E2954;
+      font-size: 44px;
+      font-weight: 500;
+      margin-top: 0;
+      position: relative;
+      text-transform: capitalize;
+      margin-bottom: -15px;
+      padding: 30px 0;
+    }
+    /*.section-title{*/
+    /*    margin-top: 20px;*/
+    /*}*/
+    .section-title p {
+      padding: 0 10px;
+      width: 65%;
+      margin: auto;
+      letter-spacing: 1px;
+    }
+    .section-title {
+      margin-bottom: 20px;
+    }
+    .text-center {
+      text-align: center!important;
+    }
+    .social-links {
+      /*display: flex;*/
+      /*justify-content: space-between;*/
+      /*align-items: center;*/
+      /*padding: 10px;*/
+      margin-bottom:20px;
+    }
+
+    /*.social-links a {*/
+    /*    display: inline-block;*/
+    /*    width: 10px; !* Adjust the width of the link containers *!*/
+    /*    height: 30px; !* Adjust the height of the link containers *!*/
+    /*}*/
+
+    .social-links img {
+      width:5%;
+      height: 5%;
+    }
+    .social-links img.github{
+      width:3.5%;
+      height: 3.5%;
+    }
+    .social-links .email-box{
+      padding-left: 40px;
+      color: #0E2954;
+      text-decoration: none;
+      font-family: 'Merriweather', serif;
+      font-size: 15px;
+    }
+    .social-links .github-box{
+      padding-left: 20px;
+      color: #0E2954;
+      text-decoration: none;
+      font-family: 'Merriweather', serif;
+      font-size: 15px;
+    }
+    .social-links .linkedin-box{
+      padding-left: 20px;
+      color: #0E2954;
+      text-decoration: none;
+      font-family: 'Merriweather', serif;
+      font-size: 15px;
+    }
+    .linkedin-box:hover,  .github-box:hover, .email-box:hover{
+      /* You can apply any styles you want to the link on hover */
+      /* For example, change the text color and add a background color */
+      color: #884A39; /* Change this color to your preferred hover color */
+      text-decoration: underline;
+      /*background-color: #f7f7f7; !* Change this color to your preferred background color on hover *!*/
+    }
+    .blog {
+      padding: 50px 200px 50px 200px;
+      /*margin-right: 150px;*/
+      /*background-color: #FFFBEB;*/
+      background-color: #FFFBEB;
+    }
+    /*.blog .container {*/
+    /*  box-sizing: border-box;*/
+    /*  !*padding: 50px 0;*!*/
+    /*  !*margin: 150px;*!*/
+    /*  !*margin-right: 150px;*!*/
+    /*  !*margin-left: 150px;*!*/
+    /*}*/
+    @media (max-width: 767px){
+      .email-align-mobile
+      {
+        margin-top: 7px;
+      }
+      .email-box
+      {
+        margin-left:75px;
+      }
+      .github-box
+      {
+        margin-left:90px;
+      }
+      .linkedin-box
+      {
+        margin-left:75px;
+      }
+      .blog
+    {
+        padding: 50px 10px 10px 10px;
+    }
+
+    }
+    li {
+      /*width: 200px; !* Set the desired width for the list items *!*/
+      text-align: justify;
+    }
+    footer{
+      background:  #F8CBA6;
+    }
+
+    /*.date-content {*/
+    /*    font-size: 50px; !* Change the font size to your desired value *!*/
+    /*}*/
+  </style>
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand navbar-brand-left" href="#">Srushti Pawar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <!--            ?\<ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+      <ul id="navbarItems" class="navbar-nav navbar-nav-right ms-auto mb-2 mb-lg-0 pr-10">
+        <li class="nav-item">
+          <a class="nav-link pr-10" aria-current="page" href="index.html#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pr-10" aria-current="page" href="index.html#about-section">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pr-3" aria-current="page" href="index.html#work-experience">Work Experience</a>
+        </li>
+        <!--                <li class="nav-item">-->
+        <!--                    <a class="nav-link pr-3" aria-current="page" href="#">Projects</a>-->
+        <!--                </li>-->
+        <li class="nav-item">
+          <a class="nav-link active pr-10" aria-current="page" href="#blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pr-10" aria-current="page" href="index.html#contact">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="blog" class="blog">
+  <div class="container">
+
+    <h2 class="about-heading" >My Half Marathon(21k) Journey</h2>
+    <h6 >September 23, 2023</h6>
+        <p class="justified-text">
+          I am a 24 year old girl, who just completed my first half marathon! This is a blog about my marathon journey! I was always in my head this underweight girl who never had the confidence that I can pull off any sport mainly because I believed I wouldn't have enough strength, stamina and importantly I thought I would lose weight!  But here I am today completing 21 kms and only feeling stronger!        </p>
+        <p class="justified-text">
+          On 24th April I registered for a half marathon, at the time of registration I had never run even half a mile! During that time a friend of mine, Adithya had recently finished his full marathon(42kms) which was truly inspirational for our entire group. But being human, do you ever feel motivated to actually go out and run and practice for a marathon which is like 6 months away?! Come on, not at all! This was my end term month of Spring sem and as always I had an excuse for myself that studies are more important! So I barely ran 1-2 times before summer started.
+        </p>
+    <p class="justified-text">
+      I moved to Boston for my summer internship. I met my new roommates, Monyka and Keisha, in my first week, to have a small talk, I had said "I have registered for a half marathon", and funnily enough I wasn't aware that both of them were into running. I was still not inspired enough, I told Adithya this -- and he said this is because you haven't yet experienced runner's high! Monyka asked me to join for a run in my first week, that day I ran my first 5kms and after that run I actually felt like my legs were numb and I was floating -- this is a runner's high. That was the best feeling of my life! I had never experienced such a win!
+    </p>
+    <p class="justified-text">
+      Even though maintaining consistency was necessary, it is always very easy to give up because every excuse you give to yourself feels valid! Then why did I keep on running? Like everyone else, my internship period was stressful and lonely. I needed something to look forward to for my day. As much as big wins are necessary in our lives, but small wins help you survive the day. Running helped me maintain my mental sanity, helped me have some personal yet achievable milestones for my week. Looking back I feel more than for the marathon I ran to survive my weeks peacefully. There were days with bad runs as well as good runs! I completed my first 8k in June and first 10k in July! Along with me 4 of my friends had registered. Shreyas was in Florida, Adithya in Seattle, Abhipsha in Jersey and Priyesh in Indiana. We used to share our runs on Strava which was quite helpful and inspirational!
+    </p>
+    <p class="justified-text">
+      Until the end of August I had never run more than 10k, I worried about my cardio since the marathon was just 3 weeks away! Just to give myself confidence, I ran my first 15k in the first week of September. My knee got injured a bit after that. I was still confident that it would recover in 3 weeks, however due to the daily commute to college, it just worsened and never really recovered.
+    </p>
+    <p class="justified-text">
+      Fast forward to the day of the marathon, I had many things in my mind, will my knee be able to survive, what if I feel like giving up midway, have I eaten enough, what if I feel like using the washroom in between the marathon, and importantly will I be able to run in rain! But all those thoughts vanished once I reached the starting point, the energy was surreal! All people from different age groups, everyone was super inspiring. The race began, my knee started hurting but my cardio was good, there was a moment where there were 2 sign boards one said "take left if you want to do a 5k marathon" and another said "take right if you want to do 21k marathon". At that moment, I felt like this is it, my knee will recover but I might never be here again, and I took the right turn! Once you cover 5-6kms your whole body becomes numb, you stop feeling any pain and even legs. The marathon route was beautiful. When I saw the Statue of Liberty on my way I felt like if I had taken that left, I would have missed this! Run till 15k was smooth, but after 15k body, mind, legs everything starts giving up, I felt weak, tired, felt like giving up. But looking at people running around, you feel like just some time more. The last 2 kms feel like forever, you wish to see the finish line so badly, but it just never appears! Finally, I saw a board saying '13 miles' done, I was converting in my head how much kms it is? And a middle aged uncle came next to me and said you are literally there, do not stop now! And that was it, I saw the finish line, I could hear my friends shouting my name, and crossing that finish line was one of the biggest moments in my life. I am so glad I did not take that left!
+    </p>
+    <p class="justified-text">
+      I must admit that I have given up on many things in my life before, but this feeling of not actually giving up this time and sticking till the end feels amazing! In the end, if someone like me can complete a marathon, then I guess anyone can!
+    </p>
+    <p></p>
+
+        <!-- Add more information about yourself as needed -->
+
+    </div>
+</section>
+
+<footer>
+  <p>&copy; 2023 Srushti Ajay Pawar</p>
+</footer>
+<script src="bootstrap-5.3.0-dist/js/bootstrap.js"></script>
+</body>
+<script>
+  // Get all the nav-link elements inside the navbarItems
+  const navLinks = document.querySelectorAll("#navbarItems .nav-link");
+
+  // Add a click event listener to each nav-link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      // Remove the "active" class from any previously active link
+      document.querySelector("#navbarItems .nav-link.active").classList.remove("active");
+      // Add the "active" class to the clicked link
+      this.classList.add("active");
+    });
+  });
+
+</script>
+</html>
