@@ -19,6 +19,14 @@
     <link rel="icon" type="image/png" href="images/email.png">
     <link rel="icon" type="image/png" href="github-favicon.png">
     <link rel="icon" type="image/png" href="linkedin-favicon.png">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
     <style>
         /* Custom CSS for padding the nav-items on the right side */
@@ -31,10 +39,17 @@
         /*    !*padding-top: 30px; !* Adjust the value as needed *!*!*/
         /*    margin-right: 70px; !* Adjust the value as needed *!*/
         /*}*/
+        .portfolio-item {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            max-width: 530px;
+            margin: auto auto 1rem;
+        }
         .no-border-card {
             border: none;
-            background: #FFE7CC;
-            /*background: white;*/
+            /*background: #FFE7CC;*/
+            background: white;
         }
         .timeline {
             border-left: 3px solid #884A39;;
@@ -120,8 +135,8 @@
             -webkit-box-shadow: 0 0 0 3px #C38154;
             box-shadow: 0 0 0 3px #C38154;
             left: -55.8px;
-            background: #FFE7CC;
-            /*background: white;*/
+            /*background: #FFE7CC;*/
+            background: white;
             border-radius: 50%;
             height: 9px;
             width: 9px;
@@ -158,16 +173,17 @@
             padding: 15px 0;
             /*margin-right: 150px;*/
             /*background-color: #FFFBEB;*/
-            background-color: #FFE7CC;
+            background-color: white;
             /*background: white;*/
         }
 
         .about-heading {
             /* Custom CSS for moving the heading a little more down */
             margin-top: 20px; /* Adjust the value as needed */
-            font-family: 'Satisfy', cursive;
+            /*font-family: 'Satisfy', cursive;*/
+            font-family: 'Merriweather', serif;
             /*font-family: 'Merriweather', serif;*/
-            font-weight: 800;
+            font-weight: 400;
             /*font-size: 25px;*/
             color: #884A39;
         }
@@ -176,6 +192,10 @@
             /*margin-right: 150px;*/
             /*background-color: #FFFBEB;*/
             background-color: #FFFBEB;
+        }
+        .content-section
+        {
+            background-color: white;
         }
         .about-section .container {
             /*padding: 50px 0;*/
@@ -501,6 +521,122 @@
         footer{
             background:  #F8CBA6;
         }
+        .center-block {
+            max-width: 150px; /* Set the desired width for the container */
+            max-height: 200px; /* Set the desired height for the container */
+            overflow: hidden; /* Hide any content that overflows the container */
+        }
+
+
+        /* Blog Section started */
+        #blog{
+            background-color: #ECF9FF;
+        }
+       .blog section{
+           background-color: #ECF9FF;
+       }
+        .blog .container {
+            padding-bottom: 40px;
+            background-color: #ECF9FF;;
+        }
+        .blog .blog-item {
+            /* background-color: red; */
+            -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%;
+            max-width: 33.33%;
+            margin-bottom: 30px;
+            display: flex;
+        }
+        .blog .blog-item-inner {
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #d4d4e3;
+            width: 100%;
+            height: 100%;
+            /*background-color:white;*/
+            background-color: #FFFBEB;
+        }
+        .blog .blog-item-inner .blog-img {
+            position: relative;
+            overflow: hidden;
+        }
+        .blog .blog-item-inner .blog-img img {
+            width: 100%;
+            display: block;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        .blog .blog-item-inner:hover .blog-img img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        .blog .blog-item-inner .blog-img .blog-date {
+            position: absolute;
+            padding: 4px 10px;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+            left: 15px;
+            bottom: 15px;
+        }
+        .blog .blog-item-inner .blog-info {
+            padding: 30px 15px;
+        }
+        .blog .blog-item-inner .blog-info .blog-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #884A39;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .blog .blog-item-inner .blog-info .blog-description {
+            font-size: 14px;
+            line-height: 25px;
+            color: black;
+            font-weight: 400;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .blog .blog-item-inner .blog-info .blog-tags {
+            font-size: 30px;
+            line-height: 25px;
+            color: #504e70;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+        .blog .blog-item-inner .blog-info .blog-tags a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 991px) {
+            .blog .blog-item,
+            .portfolio .portfolio-item,
+            .service .service-item {
+                -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        @media (max-width: 767px) {
+            .contact .contact-form .col-6,
+            .blog .blog-item,
+            .service .service-item,
+            .about .about-content .experience,
+            .about .about-content .education,
+            .about .about-content .skills,
+            .about .about-content .personal-info {
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .portfolio .portfolio-filter button {
+                margin-bottom: 10px;
+            }
+        }
 
         /*.date-content {*/
         /*    font-size: 50px; !* Change the font size to your desired value *!*/
@@ -525,6 +661,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link pr-10" aria-current="page" href="#about-section">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pr-10" aria-current="page" href="#blog">Projects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link pr-3" aria-current="page" href="#work-experience">Work Experience</a>
@@ -554,9 +693,17 @@
                 <p class="justified-text">
                     Hello! I am Srushti Pawar.
                     I am grad student at NYU -- Courant Institute of Mathematical Sciences.
-                    Can call myself a jack of many trades, from Data Engineering, Software Engineering in backend, networking switches, teaching, etc. to currently exploring AI in healthcare space, done it all. But the ultimate pursuit is to master one or some.
+                    Currently working as ML specialist @<u>AI for Scientific Research Lab</u> in NYU, collaborating with NYU Langone on a medical image segmentation project.<br>
                 </p>
                 <p class="justified-text">
+                <h6></h6>
+                    <b> Skills and Proficiency:</b>
+                    <h6>Efficient and scalable software development, Data integration and pipelines, Cloud platforms, ML infrastructure and deployment</h6>
+                    <b> Research Interests:</b>
+                    <h6>AI in Healthcare, Computer Vision, LLMs</h6>
+                </p>
+                <p class="justified-text">
+                    Can call myself a jack of many trades, from SDE-ML, Data Engineering, Software Engineering in backend, networking switches, teaching, etc. to currently exploring AI in healthcare space, done/doing it all. But the ultimate pursuit is to master one or some.
                     Logical thinking and building most efficient and optimized solutions are my strengths.
                     Thus, I am always looking for something challenging to contribute my knowledge and derive most optimal solutions for most complicated problems.
                 </p>
@@ -572,6 +719,166 @@
         </div>
     </div>
 </section>
+<section id="companies" class="content-section" style="padding-top: 2rem; padding-bottom: 2rem" >
+    <aside class="clients">
+        <div class="row">
+            <div class="col-md-12" style="text-align: center">
+                <a href="https://www.aifsr.com" target="blank" class="client-link">
+                    <img class="center-block" src="/images/aifsr.jpeg" alt="AI for Scientific Research- NYU Lab">
+                </a>
+                <a href="https://www.arista.com/en/" target="blank" class="client-link">
+                    <img class="center-block" src="/images/arista.png" alt="Arista Networks">
+                </a>
+                <a href="https://cims.nyu.edu/dynamic/" target="blank" class="client-link">
+                    <img class="center-block" src="/images/courant.png" alt="New York University(NYU)- Courant Institute of Mathematical Sciences">
+                </a>
+                <a href="https://www.1eq.com" target="blank" class="client-link">
+                    <img class="center-block" src="/images/eQ%20tech.jpeg" alt="eQ Technologic">
+                </a>
+                <a href="https://www.slb.com" target="blank" class="client-link">
+                    <img class="center-block" src="/images/schlumberger.png" alt="Schlumberger">
+                </a>
+                <a href="https://www.relfor.com" target="blank" class="client-link">
+                    <img class="center-block" src="/images/relfor.png" alt="Relfor Labs Pvt Ltd">
+                </a>
+                <a href="https://pict.edu" target="blank" class="client-link">
+                    <img class="center-block" src="/images/PICT.jpeg" alt="Pune Institute of Computer Technology - PICT">
+                </a>
+            </div>
+        </div>
+    </aside>
+</section>
+<!--<section class="project-section" id="projects">-->
+    <!-- Blog Section -->
+    <section class="blog section" id="blog">
+        <div class="container">
+            <div class="row">
+<!--                <div class="section-title padd-15" >-->
+<!--                    <h2>Personal Projects</h2>-->
+<!--                </div>-->
+                <h6 class="card-title work-ex" style="padding-top: 20px; padding-bottom: 20px">Personal Projects</h6>
+            </div>
+            <div class="row">
+                <!-- Blog Item -->
+                <div class="blog-item padd-15">
+                    <div class="blog-item-inner shadow-dark">
+                        <div class="blog-info">
+                            <h4 class="blog-title">Self-supervised Video Frame Prediction and Segmentation</h4>
+                            <p class="blog-description">
+                                <b>Part of Deep Learning Course - Prof. Yann Lecun, Prof. Alfredo Canzianni</b>
+                                Deployed a U-Net architecture for semantic segmentation on the objects of interest within the final predicted frame;
+                                created a self-supervised framework to predict next frames with a SimVP (CNN-based encoder-decoder) model.
+                                Achieved top 20 percentile[Jaccard index 0.25] in DL course competition of predicting and segmenting future video frames.
+                            <p>
+                            <a href="https://github.com/srushti98/Self-supervised-Video-Frame-Prediction-and-Semantic-Segmentation/tree/master" target="_blank">
+                                <i class="fab fa-github" style="margin-left: 10px;font-size: 24px;"></i>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1Qwrr-EDlx-IGeudGE8XTHuLczqvsnfpP/view" target="_blank">
+                                <i class="far fa-file-pdf" style="margin-left: 10px;font-size: 24px;"></i>
+                            </a>
+                        </p>
+                        </div>
+<!--                        <div class="blog-icons">-->
+<!--                            <a href="https://github.com/yourgithubrepository" target="_blank">-->
+<!--                                <i class="fab fa-github" style="margin-left: 10px;"></i>-->
+<!--                            </a>-->
+<!--                            <a href="link-to-your-pdf.pdf" target="_blank">-->
+<!--                                <i class="far fa-file-pdf"></i>-->
+<!--                            </a>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+                <!-- Blog Item End -->
+                <!-- Blog Item -->
+                <div class="blog-item padd-15">
+                    <div class="blog-item-inner shadow-dark">
+                        <div class="blog-info">
+                            <h4 class="blog-title">Semantic Role Labeling using BiLSTM</h4>
+                            <p class="blog-description">
+                                <b>Part of NLP Course - Prof. Adam Meyers</b>
+                                Developed a deep learning model using BiLSTM for Argument Prediction (object and subject) of a sentence on Nombank Dataset; based on dependency mappings and POS tags; used Tensorflow library for training on cloud GPUs.
+                                Our model outperformed the baseline model and achieved a precision of 0.88 and F1-score of 0.82.</p>
+                            <a href="https://github.com/srushti98/Semantic-Role-Labelling-Nombank-Dataset" target="_blank">
+                                <i class="fab fa-github" style="margin-left: 10px;font-size: 24px;"></i>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1CFraBM1wFFa8IbnjhL5hL2EicnNp8FHb/view?usp=sharing" target="_blank">
+                                <i class="far fa-file-pdf" style="margin-left: 10px;font-size: 24px;"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Item End -->
+                <!-- Blog Item -->
+                <div class="blog-item padd-15">
+                    <div class="blog-item-inner shadow-dark">
+                        <div class="blog-info">
+                            <h4 class="blog-title">Efficient Communication Portal for Mentors and Students </h4>
+                            <p class="blog-description"><b>Java Servlets, JSP, MySQL</b></p>
+                            <p class="blog-description">Created an engaging communication platform for mentors and students with features, including leave applications,
+                                meeting scheduling and performance tracking; along with admin side features like allotment of students to mentors.
+                                Implemented advanced features like relocating/updating students assigned to mentors and tracking their history.</p>
+                            <a href="https://github.com/srushti98/mentor1/tree/AfterSubmissionIntgratedBranch" target="_blank">
+                                <i class="fab fa-github" style="margin-left: 10px;font-size: 24px;"></i>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1grWoiZJgbN4ZQ4RF9xrIf-KB2dy3g_Hz/view?usp=share_link" target="_blank">
+                                <i class="far fa-file-pdf" style="margin-left: 10px;font-size: 24px;"></i>
+                            </a>
+<!--                            <p class="blog-tags"> <a href="https://github.com/simmimak/Video-Frame-Prediction-and-Semantic-Segmentation-with-SSL" target="_blank"><i class="fa fa-github"></i></a> </p>-->
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-item padd-15">
+                    <div class="blog-item-inner shadow-dark">
+                        <div class="blog-info">
+                            <h4 class="blog-title">Smart Activity Management System for Professors</h4>
+                            <p class="blog-description"><b>Node.js, MongoDB, Vue.js</b></p>
+                            <p class="blog-description">Developed a platform to automate manual work of professors and admins; designed features like keeping track of monthly
+                                activities conducted and attended such as workshops, seminars; teaching schedule management, along with admin side
+                                features like monitoring professors’ records, adding or removing professors from the system and generating excel reports</p>
+                            <a href="https://github.com/srushti98/Teachers-Activity-Management-System" target="_blank">
+                                <i class="fab fa-github" style="margin-left: 10px;font-size: 24px;"></i>
+                            </a>
+
+<!--                            <p class="blog-tags"><a href="https://github.com/simmimak/Semantic-Role-Labelling-using-Bi-LSTM-and-GCN-on-NomBank-Dataset" target="_blank"><i class="fa fa-github"></i></a></p>-->
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-item padd-15">
+                    <div class="blog-item-inner shadow-dark">
+                        <div class="blog-info">
+                            <h4 class="blog-title">Android Application for Cafeteria Management</h4>
+                            <p class="blog-description"><b>Java, Firebase, Android Studio</b></p>
+                            <p class="blog-description">Implemented features like user authentication, providing daily menus to students, pre-ordering meals, maintaining order
+                                history, integrated payments and credits systems. Utilized firebase as database for admin, students, menus and credits.</p>
+<!--                            <a href="https://github.com/srushti98/Semantic-Role-Labelling-Nombank-Dataset" target="_blank">-->
+<!--                                <i class="fab fa-github" style="margin-left: 10px;font-size: 24px;"></i>-->
+<!--                            </a>-->
+
+                        </div>
+                    </div>
+                </div>
+
+<!--                <div class="blog-item padd-15">-->
+<!--                    <div class="blog-item-inner shadow-dark">-->
+<!--                        <div class="blog-info">-->
+<!--                            <h4 class="blog-title">Human Neuron Inspired CNN architecture for Music Emotion Recognition</h4>-->
+<!--                            <p class="blog-description">Designed a CNN-based Music Emotion-->
+<!--                                Recognition model that mimics the way a human brain responds to an emotion i.e. by firing a specific set of neurons for each-->
+<!--                                emotion. It yielded an accuracy of 82% with the additional benefit of fewer computational parameters.</p>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <!-- Blog Item End -->
+            </div>
+        </div>
+    </section>
+<!--</section>-->
 
 <section id="work-experience" class="work-experience" >
     <div  class="container">
@@ -582,7 +889,7 @@
                         <h6 class="card-title work-ex">Work Experience</h6>
                         <div id="content">
                             <ul class="timeline">
-                                <li class="event" data-date="May 2023 - Present">
+                                <li class="event" data-date="May 2023-Aug 2023">
                                     <h3>Arista Networks -- Software Engineering Intern</h3>
                                     <p>
                                     <ul>
@@ -659,30 +966,30 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center" >
-                <div class="col-lg-7">
-                    <div class="contact">
-                        <form class="form" name="enq" method="post" action="contact.php" onsubmit="return validation();">
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <input type="text" name="name" class="form-control" placeholder="Name" required="required">
-                                </div>
-                                <div class="form-group col-md-6 email-align-mobile">
-                                    <input type="email" name="email" class="form-control" placeholder="Email" required="required">
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required="required"></textarea>
-                                </div>
-                                <div class="col-md-12 text-center">
-                                    <button type="submit" value="Send message" name="submit" id="submitButton" class="btn btn-contact-bg" title="Submit Your Message!">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+<!--            <div class="row justify-content-center" >-->
+<!--                <div class="col-lg-7">-->
+<!--                    <div class="contact">-->
+<!--                        <form class="form" name="enq" method="post" action="contact.php" onsubmit="return validation();">-->
+<!--                            <div class="row">-->
+<!--                                <div class="form-group col-md-6">-->
+<!--                                    <input type="text" name="name" class="form-control" placeholder="Name" required="required">-->
+<!--                                </div>-->
+<!--                                <div class="form-group col-md-6 email-align-mobile">-->
+<!--                                    <input type="email" name="email" class="form-control" placeholder="Email" required="required">-->
+<!--                                </div>-->
+<!--                                <div class="form-group col-md-12">-->
+<!--                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">-->
+<!--                                </div>-->
+<!--                                <div class="form-group col-md-12">-->
+<!--                                    <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required="required"></textarea>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-12 text-center">-->
+<!--                                    <button type="submit" value="Send message" name="submit" id="submitButton" class="btn btn-contact-bg" title="Submit Your Message!">Send Message</button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <!--            </div>&lt;!&ndash;- END COL &ndash;&gt;-->
                 <!--            <div class="col-lg-5">-->
                 <!--                <div class="single_address">-->
